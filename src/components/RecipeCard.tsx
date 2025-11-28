@@ -1,6 +1,6 @@
 import { Recipe } from "../types/recipe";
 import { Card, CardContent } from "./ui/card";
-import { Clock, ChefHat } from "lucide-react";
+import { Clock } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 interface RecipeCardProps {
@@ -38,10 +38,6 @@ export function RecipeCard({ recipe, onClick }: RecipeCardProps) {
           <div className="flex items-center gap-1">
             <Clock className="w-4 h-4" />
             <span>{recipe.prepTime}</span>
-          </div>
-          <div className="flex items-center gap-1">
-            <ChefHat className="w-4 h-4" />
-            <span>{recipe.chef}</span>
           </div>
         </div>
       </CardContent>

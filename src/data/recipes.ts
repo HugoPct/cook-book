@@ -3,20 +3,27 @@ import { Recipe } from "../types/recipe";
 export const recipes: Recipe[] = [
   {
     id: "1",
-    name: "BLT (without veggies)",
-    description: "Daljeet famous sandwich",
-    prepTime: "5 min",
-    chef: "Daljeet",
+    name: "Creamy Pasta Carbonara",
+    description: "Classic Italian pasta dish with a creamy egg-based sauce",
+    prepTime: "10 min",
+    chef: "Chef Mario Rossi",
     image: "https://images.unsplash.com/photo-1588013273468-315fd88ea34c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwYXN0YSUyMGNhcmJvbmFyYXxlbnwxfHx8fDE3NjQyMzYwNDJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     ingredients: [
-      "soft bred",
-      "2 slices of cheddar",
-      "4 slices of chorizo",
+      "400g spaghetti",
+      "200g pancetta or bacon, diced",
+      "4 large eggs",
+      "100g Parmesan cheese, grated",
+      "2 cloves garlic, minced",
+      "Salt and black pepper to taste",
+      "Fresh parsley for garnish"
     ],
     instructions: [
-      "Put 2 slices of cheddar, 4 of chorizo within 2 soft breads.", 
-      "Put in the toast machine for 5min.", 
-      "Slice in diagonal and serve hot."
+      "Bring a large pot of salted water to a boil and cook spaghetti according to package directions.",
+      "While pasta cooks, fry pancetta in a large skillet over medium heat until crispy, about 5-7 minutes. Add garlic and cook for 1 minute.",
+      "In a bowl, whisk together eggs and Parmesan cheese.",
+      "Drain pasta, reserving 1 cup of pasta water. Add hot pasta to the skillet with pancetta.",
+      "Remove from heat and quickly stir in the egg mixture, tossing constantly. Add pasta water as needed to create a creamy sauce.",
+      "Season with salt and pepper, garnish with parsley and extra Parmesan. Serve immediately."
     ],
     tags: ["Italian", "Pasta", "Quick"]
   },
@@ -25,7 +32,7 @@ export const recipes: Recipe[] = [
     name: "Chicken Stir Fry",
     description: "Colorful and healthy stir fry with tender chicken and crisp vegetables",
     prepTime: "15 min",
-    chef: "Ming Chen",
+    chef: "Chef Wei Zhang",
     image: "https://images.unsplash.com/photo-1621515554656-3da68ba128b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwc3RpciUyMGZyeXxlbnwxfHx8fDE3NjQyMjUxODJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     ingredients: [
       "500g chicken breast, sliced",
@@ -56,7 +63,7 @@ export const recipes: Recipe[] = [
     name: "Easy Beef Tacos",
     description: "Flavorful Mexican-style tacos perfect for a quick dinner",
     prepTime: "10 min",
-    chef: "Maria Rodriguez",
+    chef: "Chef Carlos Garcia",
     image: "https://images.unsplash.com/photo-1689774329109-9b70beeefc0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YWNvcyUyMGRpbm5lcnxlbnwxfHx8fDE3NjQzMjcwNDh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     ingredients: [
       "500g ground beef",
@@ -85,7 +92,7 @@ export const recipes: Recipe[] = [
     name: "Baked Salmon with Vegetables",
     description: "Healthy and delicious one-pan salmon dinner",
     prepTime: "10 min",
-    chef: "Gordon Ramsay",
+    chef: "Chef Emma Johnson",
     image: "https://images.unsplash.com/photo-1641898378335-246c542f01f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYWxtb24lMjB2ZWdldGFibGVzfGVufDF8fHx8MTc2NDMzMjg1Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     ingredients: [
       "4 salmon fillets (about 150g each)",
@@ -112,7 +119,7 @@ export const recipes: Recipe[] = [
     name: "Vegetarian Buddha Bowl",
     description: "Nutritious and colorful bowl packed with plant-based goodness",
     prepTime: "15 min",
-    chef: "Jamie Oliver",
+    chef: "Chef Lily Chen",
     image: "https://images.unsplash.com/photo-1505576633757-0ac1084af824?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidWRkaGElMjBib3dsfGVufDF8fHx8MTc2NDI1NzcxNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     ingredients: [
       "2 cups cooked quinoa",
@@ -141,7 +148,7 @@ export const recipes: Recipe[] = [
     name: "Quick Chicken Curry",
     description: "Aromatic and flavorful curry ready in 30 minutes",
     prepTime: "10 min",
-    chef: "Priya Krishna",
+    chef: "Chef Priya Sharma",
     image: "https://images.unsplash.com/photo-1707322571124-9d3a47cce941?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjdXJyeSUyMHJpY2V8ZW58MXx8fHwxNzY0MzA3NTAwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
     ingredients: [
       "500g chicken thighs, cubed",

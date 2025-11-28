@@ -3,8 +3,7 @@ import { recipes as initialRecipes } from "./data/recipes";
 import { Recipe } from "./types/recipe";
 import { RecipeCard } from "./components/RecipeCard";
 import { RecipeDetailSheet } from "./components/RecipeDetailSheet";
-import { AddRecipeDialog } from "./components/AddRecipeDialog";
-import { TestDialog } from "./components/TestDialog";
+import { RecipeFormDialog } from "./components/RecipeFormDialog";
 import { UtensilsCrossed, Plus } from "lucide-react";
 import { Button } from "./components/ui/button";
 
@@ -12,29 +11,23 @@ export default function App() {
   const [recipes, setRecipes] = useState<Recipe[]>(initialRecipes);
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [sheetOpen, setSheetOpen] = useState(false);
-  const [addDialogOpen, setAddDialogOpen] = useState(false);
+  const [formOpen, setFormOpen] = useState(false);
 
   const handleRecipeClick = (recipe: Recipe) => {
     setSelectedRecipe(recipe);
     setSheetOpen(true);
   };
 
-  const handleAddRecipe = (newRecipe: Recipe) => {
-    setRecipes([newRecipe, ...recipes]);
-  };
-
-  const handleButtonClick = () => {
-    console.log("Button clicked! Opening dialog...");
-    setAddDialogOpen(true);
-    console.log("Dialog state set to:", true);
+  const handleAddRecipe = (recipe: Recipe) => {
+    setRecipes([recipe, ...recipes]);
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
       {/* Header */}
-      <header className="bg-white border-b border-orange-100 sticky top-0 z-40 shadow-sm">
+      <header className="bg-white border-b border-orange-100 sticky top-0 z-10 shadow-sm">
         <div className="container mx-auto px-4 py-4 sm:py-6">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-3">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center">
                 <UtensilsCrossed className="w-6 h-6 text-white" />
@@ -44,12 +37,9 @@ export default function App() {
                 <p className="text-sm text-gray-600">What's for dinner tonight?</p>
               </div>
             </div>
-            <Button
-              onClick={handleButtonClick}
-              className="h-12 w-12 rounded-full bg-orange-600 hover:bg-orange-700"
-              size="icon"
-            >
-              <Plus className="h-5 w-5" />
+            <Button onClick={() => setFormOpen(true)} className="gap-2">
+              <Plus className="w-4 h-4" />
+              <span className="hidden sm:inline">Add Recipe</span>
             </Button>
           </div>
         </div>
@@ -84,24 +74,11 @@ export default function App() {
       />
 
       {/* Add Recipe Dialog */}
-      <TestDialog
-        open={addDialogOpen}
-        onOpenChange={setAddDialogOpen}
+      <RecipeFormDialog
+        open={formOpen}
+        onOpenChange={setFormOpen}
+        onSubmit={handleAddRecipe}
       />
-      {/* <AddRecipeDialog
-        open={addDialogOpen}
-        onOpenChange={setAddDialogOpen}
-        onAddRecipe={handleAddRecipe}
-      /> */}
-
-      {/* Floating Add Button */}
-      <Button
-        onClick={() => setAddDialogOpen(true)}
-        className="fixed top-20 right-8 h-14 w-14 rounded-full shadow-lg hover:shadow-xl transition-shadow bg-orange-600 hover:bg-orange-700 z-50"
-        size="icon"
-      >
-        <Plus className="h-6 w-6" />
-      </Button>
     </div>
   );
 }
